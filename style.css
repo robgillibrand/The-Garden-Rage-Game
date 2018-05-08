@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'Press-start';
+  src: URL('Styles/prstartk.woff') format('woff');
+}
+
+body {
+  background-color: #eeffe6;
+}
+
+h3, p, h4 {
+  font-family: 'Press-start';
+  text-align: center;
+  color: white;
+  text-shadow: -1px 0 black, 0 3px black, 2px 0 black, 0 -1px black;
+  text
+}
+
+.player_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid;
+}
+
+.item1 { grid-area: player1; }
+.item2 { grid-area: board; }
+.item3 { grid-area: player2; }
+
+.grid-container {
+  padding: 4%;
+  display: grid;
+  grid-column: auto;
+  grid-template-areas:
+  'player1 board player2';
+}
+
+.player1-scorecard, .player2-scorecard {
+  background-color: #00BFFF;
+  border: 3px solid black;
+  margin: 0 5% 0 5%;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 60px 60px 60px 60px 60px
+  60px 60px 60px 60px 60px;
+  border: 2px solid black;
+  padding: 0
+}
+
+.box {
+  padding: 15px;
+  font-size: 100%;
+  border: 1px solid black;
+
+}
+.grass {
+  background-image: url('img/grass.jpg');
+  background-size: 100% 100%;
+}
+.stone {
+  background-image: url('img/stone.jpg');
+  background-size: 100% 100%;
+}
+.player1 {
+  background-image: url('img/player1.jpg');
+  background-size: 100% 100%;
+}
+.player2 {
+  background-image: url('img/player2.jpg');
+  background-size: 100% 100%;
+}
+.mushroom {
+  background-image: url('img/mushroom.jpg');
+  background-size: 100% 100%;
+}
+.wasp {
+  background-image: url('img/wasp.jpg');
+  background-size: 100% 100%;
+}
+.spade {
+  background-image: url('img/spade.jpg');
+  background-size: 100% 100%;
+}
+.mower {
+  background-image: url('img/mower.jpg');
+  background-size: 100% 100%;
+}
+
+.modal {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+}
+
+#modal-content,.modal-content {
+  background-color: #00BFFF;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid black;
+  width: 50%;
+}
+
+#introModal, .introModal{
+  background-color: #00BFFF;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid black;
+  width: 100%;
+}
+
+.introModalText{
+  line-height: 1.8em;
+  background-color: #0060ff;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid black;
+  width: 100%;
+}

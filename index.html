@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div id="introModal" class="modal">
+    <h3 style="color:yellow">Welcome to The Garden Rage Game!</h3>
+    <br>
+    <div id="introModalText" class="introModalText">
+      <p style="line-height:2em;"> With your characters 'Jim' and 'Bob', you battle it out to see who becomes the Head Gardener.
+        Using the arrow keys, your player is allowed 3 moves vertically or horizontally, picking up weapons on the way. When
+        the players are next to each other the battle can begin and you can choose to attack or defend.
+        Each weapon causes different amounts of damage, but with 'Defend' mode on, the damage can be reduced by 50% on the next attack.</p>
+        <br>
+        <h4>Have fun!</h4>
+      </div>
+      <br>
+      <h4 style="color:red"/>Press 'S' to start.</h4>
+      <h4><onkeypress="anyKey()"><h4>
+      </div>
+      <div class="grid-container">
+        <div class="player1-scorecard">
+          <h3>Player 1:</h3>
+          <h3 style="color:yellow">Jim</h3>
+          <img src="img/player1.jpg" style="width:50px;height:auto" class="player_image">
+          <br>
+          <h3>Current weapon:</h3>
+          <h3 style="color:yellow" id="player1-weapondisplay"></h3>
+          <br>
+          <h3>Health:</h3>
+          <h3 style="color:yellow" id="player1-healthdisplay"></h3>
+          <br>
+          <h3>Defend mode:</h3>
+          <h3 style="color:yellow" id="player1-defMode"></h3>
+        </div>
+        <div class="wrapper" id="wrapper"></div>
+        <div class="player2-scorecard">
+          <h3>Player 2:</h3>
+          <h3 style="color:yellow">Bob</h3>
+          <img src="img/player2.jpg" style="width:50px; height:auto" class="player_image">
+          <br>
+          <h3>Current weapon:</h3>
+          <h3 style="color:yellow" id="player2-weapondisplay"></h3>
+          <br>
+          <h3>Health:</h3>
+          <h3 style="color:yellow" id="player2-healthdisplay"></h3>
+          <br>
+          <h3>Defend mode:</h3>
+          <h3 style="color:yellow" id="player2-defMode"></h3>
+        </div>
+      </div>
+
+      <div id="myModal1" class="modal">
+        <div class="modal-content">
+          <p>Hey <span id="playerName"></p><p>Do you want to attack or defend?</p>
+            <p><button style="color:black" id="attack" onclick="attack()">Attack</button>
+              <button style="color:black" id="defend" onclick="defend()">Defend</button></p>
+            </div>
+          </div>
+        </div>
+        <div id="myModal2" class="modal">
+          <div class="modal-content">
+            <p>Game Over</p>
+            <p>Do you want to play again?</p>
+            <p><button style="color:black" value="check" id="playAgainYes"
+              onclick="yes()">Yes</button>
+              <button style="color:black" id="playAgainNo" onclick="no()">No</button></p>
+            </div>
+          </div>
+          <div id="myModal3" class="modal">
+            <div class="modal-content">
+              <p>Goodbye and thank you for playing.</p>
+            </div>
+          </div>
+        </div>
+        <script src="common.js"></script>
+        <script src="weapon.js"></script>
+        <script src="player.js"></script>
+        <script src="board.js"></script>
+        <script src="display.js"></script>
+        <script src="main.js"></script>
+
+      </body>
+      </html>
