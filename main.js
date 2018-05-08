@@ -99,11 +99,12 @@ function anyKey(event){
 }
 
 function gameOver(e){
-  console.log(e);
   display.showAttackModal2();
+  document.removeEventListener("keydown", handleKeys);
   this.yes = function(){
     display.hideAttackModal2();
     start();
+    document.addEventListener("keydown", handleKeys);
   }
   this.no = function(){
     display.hideAttackModal2();
